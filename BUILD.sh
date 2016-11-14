@@ -7,7 +7,7 @@ set -e
 # 2
 # Setup some constants for use later on.
 FRAMEWORK_NAME="A2bigSDK"
-SRCROOT=/Users/a2big/Desktop/Develop/SRC/A2bigSDK
+SRCROOT=/Users/a2big/Desktop/Develop/git/ios_a2big_sdk
 # 3
 # If remnants from a previous build exist, delete them.
 if [ -d "${SRCROOT}/build" ]; then
