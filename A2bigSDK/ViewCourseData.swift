@@ -10,22 +10,31 @@
 public  class ViewCourseData{
    public  var viewNo:String!
    public  var viewName:String!
-   public  var imageNo:String!
+   public var media_no: String!
+   public var imageArr:[JSON]
    public  var viewMent:String!
    public  var viewAddress:String!
    public  var viewPhone:String!
-   public  let baseUrl = "http://next-page.co.kr/web/junam/"
+   public  var flag:String!
+
+    public  let baseUrl = "http://next-page.co.kr/web/junam/"
 
     required public init(json: JSON) {
-        let image = baseUrl+json["image_no"].stringValue.replacingOccurrences(of: "./", with: "")
+       // let image = baseUrl+json["image_no"].stringValue.replacingOccurrences(of: "./", with: "")
         
-        
+
         viewNo = json["view_no"].stringValue
         viewName = json["view_name"].stringValue
-        imageNo = image
+        media_no = baseUrl+json["media_no"].stringValue.replacingOccurrences(of: "./", with: "")
+        
+        imageArr = json["image_list"].arrayValue
+
         viewMent = json["view_ment"].stringValue
         viewAddress = json["view_address"].stringValue
         viewPhone = json["view_phone"].stringValue
+        
+        flag = json["flag"].stringValue
+
     }
     
 }
