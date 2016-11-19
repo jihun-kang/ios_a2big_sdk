@@ -65,6 +65,33 @@ public class RestApiManager: NSObject {
         })
     }
     
+    public func getBeaconInfo(major: String, minor:String ,onCompletion: @escaping (JSON) -> Void) {
+        let parma1 = "&major=" + major
+        let parma2 = "&minor=" + minor
+        let route = baseURL + "look_beacon_json.php?" + parma1 + parma2
+        print(route)
+        
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as JSON)
+        })
+    }
+
+    public func getBeaconInfoTest(major: String, minor:String ,onCompletion: @escaping (JSON) -> Void) {
+        let baseURL = "http://www.a2big.com/demo/"
+
+        let parma1 = "&major=" + major
+        let parma2 = "&minor=" + minor
+        let route = baseURL + "look_beacon_json.php?" + parma1 + parma2
+        print(route)
+        
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as JSON)
+        })
+    }
+
+    
+    
+    
     //주변정보
     public func getArround(onCompletion: @escaping (JSON) -> Void) {
         let route = "http://next-page.co.kr/web/junam/look_surroundings_json.php"
@@ -139,6 +166,9 @@ public class RestApiManager: NSObject {
         })
     }
     
+    
+    
+    
     public func getRandomUser(onCompletion: @escaping (JSON) -> Void) {
         let route = "http://www.a2big.com/test/json_test.php"
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
@@ -154,7 +184,7 @@ public class RestApiManager: NSObject {
         })
     }
 
-    
+
     // MARK: Perform a GET Request
     private func makeHTTPGetRequest(path: String, onCompletion: @escaping ServiceResponse) {
         let request = NSMutableURLRequest(url: NSURL(string: path)! as URL)
