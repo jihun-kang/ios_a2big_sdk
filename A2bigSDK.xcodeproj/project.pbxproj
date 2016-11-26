@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E373F9EB1DE85D71005AE50B /* MainMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E373F9EA1DE85D71005AE50B /* MainMenuData.swift */; };
 		E3DBD8CE1DDB6637006C6212 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBD8CD1DDB6637006C6212 /* Queue.swift */; };
 		E3DBD8D81DDB73D3006C6212 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBD8D71DDB73D3006C6212 /* Stack.swift */; };
 		E3F98A971DD8A735002DA6A7 /* A2bigSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F98A8D1DD8A735002DA6A7 /* A2bigSDK.framework */; };
@@ -76,6 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E373F9EA1DE85D71005AE50B /* MainMenuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuData.swift; sourceTree = "<group>"; };
 		E3DBD8CD1DDB6637006C6212 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		E3DBD8D71DDB73D3006C6212 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		E3F98A8D1DD8A735002DA6A7 /* A2bigSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = A2bigSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -361,6 +363,7 @@
 				E3F98B1E1DD8B471002DA6A7 /* FunTimeData.swift */,
 				E3F98B1F1DD8B471002DA6A7 /* FunSeasonData.swift */,
 				E3F98B201DD8B471002DA6A7 /* GuideInfoData.swift */,
+				E373F9EA1DE85D71005AE50B /* MainMenuData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				E3F98AFE1DD8A848002DA6A7 /* ImageManager.swift in Sources */,
 				E3F98AE81DD8A7F0002DA6A7 /* UIImageView.swift in Sources */,
 				E3F98B211DD8B471002DA6A7 /* ViewCourseData.swift in Sources */,
+				E373F9EB1DE85D71005AE50B /* MainMenuData.swift in Sources */,
 				E3F98B061DD8A853002DA6A7 /* InMemoryStorage.swift in Sources */,
 				E3F98B271DD8B471002DA6A7 /* Arround.swift in Sources */,
 				E3F98B051DD8A853002DA6A7 /* DiskStorage.swift in Sources */,

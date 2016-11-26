@@ -24,6 +24,9 @@ public class LookBeaconData {
     public var is_popup: String!
     public var type: String!
     public var sub_type: String!
+    public var is_photo: String!
+    public var is_stamp: String!
+
     
     required public init(json: JSON) {
         
@@ -34,6 +37,8 @@ public class LookBeaconData {
         is_popup = json["is_popup"].stringValue
         type = json["type"].stringValue
         sub_type = json["sub_type"].stringValue
+        is_photo = json["is_photo"].stringValue
+        is_stamp = json["is_stamp"].stringValue
 
     }
 }
