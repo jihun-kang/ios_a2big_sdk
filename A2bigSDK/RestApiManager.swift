@@ -192,6 +192,14 @@ public class RestApiManager: NSObject {
         })
     }
     
+    
+    public func getBeacons(onCompletion: @escaping (JSON) -> Void) {
+        let route = "http://next-page.co.kr/web/junam/look_beacon_json.php"
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as JSON)
+        })
+    }
+
 
     // MARK: Perform a GET Request
     private func makeHTTPGetRequest(path: String, onCompletion: @escaping ServiceResponse) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E329C33B1DEEC06300A4563D /* BeaconData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329C33A1DEEC06300A4563D /* BeaconData.swift */; };
 		E373F9EB1DE85D71005AE50B /* MainMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E373F9EA1DE85D71005AE50B /* MainMenuData.swift */; };
 		E3DBD8CE1DDB6637006C6212 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBD8CD1DDB6637006C6212 /* Queue.swift */; };
 		E3DBD8D81DDB73D3006C6212 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBD8D71DDB73D3006C6212 /* Stack.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E329C33A1DEEC06300A4563D /* BeaconData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconData.swift; sourceTree = "<group>"; };
 		E373F9EA1DE85D71005AE50B /* MainMenuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuData.swift; sourceTree = "<group>"; };
 		E3DBD8CD1DDB6637006C6212 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		E3DBD8D71DDB73D3006C6212 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				E3F98B1F1DD8B471002DA6A7 /* FunSeasonData.swift */,
 				E3F98B201DD8B471002DA6A7 /* GuideInfoData.swift */,
 				E373F9EA1DE85D71005AE50B /* MainMenuData.swift */,
+				E329C33A1DEEC06300A4563D /* BeaconData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E329C33B1DEEC06300A4563D /* BeaconData.swift in Sources */,
 				E3F98AFB1DD8A848002DA6A7 /* Delay.swift in Sources */,
 				E3F98B291DD8B471002DA6A7 /* FunStoryData.swift in Sources */,
 				E3F98AB91DD8A77C002DA6A7 /* Upload.swift in Sources */,
