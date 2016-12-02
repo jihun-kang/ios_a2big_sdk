@@ -201,6 +201,14 @@ public class RestApiManager: NSObject {
     }
 
 
+    
+    public func getPopUp(onCompletion: @escaping (JSON) -> Void) {
+        let route = "http://next-page.co.kr/web/junam/look_view_popup_json.php"
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as JSON)
+        })
+    }
+    
     // MARK: Perform a GET Request
     private func makeHTTPGetRequest(path: String, onCompletion: @escaping ServiceResponse) {
         let request = NSMutableURLRequest(url: NSURL(string: path)! as URL)
