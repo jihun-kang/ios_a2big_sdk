@@ -208,6 +208,15 @@ public class RestApiManager: NSObject {
             onCompletion(json as JSON)
         })
     }
+
+    
+    public func getQuiz(onCompletion: @escaping (JSON) -> Void) {
+        let route = "http://next-page.co.kr/web/junam/quiz_json.php"
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as JSON)
+        })
+    }
+
     
     // MARK: Perform a GET Request
     private func makeHTTPGetRequest(path: String, onCompletion: @escaping ServiceResponse) {

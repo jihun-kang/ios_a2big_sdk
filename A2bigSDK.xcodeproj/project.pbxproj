@@ -11,6 +11,7 @@
 		E373F9EB1DE85D71005AE50B /* MainMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E373F9EA1DE85D71005AE50B /* MainMenuData.swift */; };
 		E3DBD8CE1DDB6637006C6212 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBD8CD1DDB6637006C6212 /* Queue.swift */; };
 		E3DBD8D81DDB73D3006C6212 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBD8D71DDB73D3006C6212 /* Stack.swift */; };
+		E3DE07EA1DF2EB8100FB939F /* QuizData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE07E91DF2EB8100FB939F /* QuizData.swift */; };
 		E3F244611DF1B87A0075EDC3 /* PopUpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F244601DF1B87A0075EDC3 /* PopUpData.swift */; };
 		E3F98A971DD8A735002DA6A7 /* A2bigSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F98A8D1DD8A735002DA6A7 /* A2bigSDK.framework */; };
 		E3F98A9C1DD8A735002DA6A7 /* A2bigSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F98A9B1DD8A735002DA6A7 /* A2bigSDKTests.swift */; };
@@ -83,6 +84,7 @@
 		E373F9EA1DE85D71005AE50B /* MainMenuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuData.swift; sourceTree = "<group>"; };
 		E3DBD8CD1DDB6637006C6212 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		E3DBD8D71DDB73D3006C6212 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		E3DE07E91DF2EB8100FB939F /* QuizData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizData.swift; sourceTree = "<group>"; };
 		E3F244601DF1B87A0075EDC3 /* PopUpData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpData.swift; sourceTree = "<group>"; };
 		E3F98A8D1DD8A735002DA6A7 /* A2bigSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = A2bigSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F98A901DD8A735002DA6A7 /* A2bigSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = A2bigSDK.h; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				E373F9EA1DE85D71005AE50B /* MainMenuData.swift */,
 				E329C33A1DEEC06300A4563D /* BeaconData.swift */,
 				E3F244601DF1B87A0075EDC3 /* PopUpData.swift */,
+				E3DE07E91DF2EB8100FB939F /* QuizData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				E3F98B261DD8B471002DA6A7 /* NoticeData.swift in Sources */,
 				E3DBD8CE1DDB6637006C6212 /* Queue.swift in Sources */,
 				E3F98AAF1DD8A773002DA6A7 /* JukeboxItem.swift in Sources */,
+				E3DE07EA1DF2EB8100FB939F /* QuizData.swift in Sources */,
 				E3F98AF01DD8A816002DA6A7 /* RBBBlockBasedArray.swift in Sources */,
 				E3F98AFC1DD8A848002DA6A7 /* ImageDownloadOperation.swift in Sources */,
 				E3F98B231DD8B471002DA6A7 /* ArroundData.swift in Sources */,
