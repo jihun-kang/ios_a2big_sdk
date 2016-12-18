@@ -217,6 +217,20 @@ public class RestApiManager: NSObject {
         })
     }
 
+    //가이드 호출
+    public func callGuide(major: String, minor:String,phone: String ,onCompletion: @escaping (JSON) -> Void) {
+        
+        let parma1 = "&major=" + major
+        let parma2 = "&minor=" + minor
+        let parma3 = "&phone=" + phone
+        let route = baseURL + "call_guide.php?" + parma1 + parma2 + parma3
+        print(route)
+        
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as JSON)
+        })
+    }
+
     
     // MARK: Perform a GET Request
     private func makeHTTPGetRequest(path: String, onCompletion: @escaping ServiceResponse) {
