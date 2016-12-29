@@ -13,6 +13,8 @@ public  class FunSeasonData {
     public var media_no: String!
     public var character_no: String!
     public var season_ment: String!
+    public var is_character:String!
+    public var is_ment:String!
     public var imageArr:[JSON]
 
     let baseUrl = "http://next-page.co.kr/web/junam/"
@@ -27,5 +29,10 @@ public  class FunSeasonData {
 
         character_no = json["character_no"].stringValue
         season_ment = json["season_ment"].stringValue
+        
+        
+        is_character = json["is_character"].stringValue
+        is_ment = json["is_ment"].stringValue
+
     }
 }
