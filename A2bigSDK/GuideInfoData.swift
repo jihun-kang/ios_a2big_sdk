@@ -18,7 +18,7 @@ public class GuideInfoData {
     public var season_flag_name: String!
     
     public var is_character: String!
-    public var is_ment: String!
+   // public var is_ment: String!
 
     
     let baseUrl = "http://next-page.co.kr/web/junam/"
@@ -33,7 +33,7 @@ public class GuideInfoData {
         season_flag_name = json["season_flag_name"].stringValue
         
         is_character = json["is_character"].stringValue
-        is_ment      = json["is_ment"].stringValue
+    //    is_ment      = json["is_ment"].stringValue
 
     }
 }
