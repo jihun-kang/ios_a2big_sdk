@@ -13,7 +13,7 @@ typealias ServiceResponse = (JSON, NSError?) -> Void
 public class RestApiManager: NSObject {
     public static let sharedInstance = RestApiManager()
    
-    let baseURL = "http://next-page.co.kr/web/junam/"
+    ////let baseURL = "http://next-page.co.kr/web/junam/"
     
     
     //let baseURL = "http://next-page.co.kr/web/junam/look_surroundings_json.php"
@@ -58,17 +58,21 @@ public class RestApiManager: NSObject {
     }
     
     //수신한 비콘정보로 서버에 요청
-    public func requestBeaconInfo(uuid: String, major: String, minor:String ,onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/look_view_json.php"
+    public func requestBeaconInfo(baseURL: String, parma1:String, uuid: String, major: String, minor:String ,onCompletion: @escaping (JSON) -> Void) {
+        //let route = "http://next-page.co.kr/web/junam/look_view_json.php"
+        let route = baseURL + parma1
+
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as JSON)
         })
     }
     
-    public func getBeaconInfo(major: String, minor:String ,onCompletion: @escaping (JSON) -> Void) {
+    public func getBeaconInfo(baseURL: String, urlParma1:String, major: String, minor:String ,onCompletion: @escaping (JSON) -> Void) {
         let parma1 = "&major=" + major
         let parma2 = "&minor=" + minor
-        let route = baseURL + "look_beacon_json.php?" + parma1 + parma2
+       // let route = baseURL + "look_beacon_json.php?" + parma1 + parma2
+        let route = baseURL + urlParma1 + "?" + parma1 + parma2
+
         print(route)
         
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
@@ -76,12 +80,14 @@ public class RestApiManager: NSObject {
         })
     }
 
-    public func getBeaconInfoTest(major: String, minor:String ,onCompletion: @escaping (JSON) -> Void) {
-        let baseURL = "http://www.a2big.com/demo/"
+    public func getBeaconInfoTest(baseURL: String, urlParma1:String, major: String, minor:String ,onCompletion: @escaping (JSON) -> Void) {
+       // let baseURL = "http://www.a2big.com/demo/"
 
         let parma1 = "&major=" + major
         let parma2 = "&minor=" + minor
-        let route = baseURL + "look_beacon_json.php?" + parma1 + parma2
+        //let route = baseURL + "look_beacon_json.php?" + parma1 + parma2
+        let route = baseURL + urlParma1 + "?" + parma1 + parma2
+        
         print(route)
         
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
@@ -93,16 +99,21 @@ public class RestApiManager: NSObject {
     
     
     //주변정보
-    public func getArround(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/look_surroundings_json.php"
+    public func getArround(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+        let route = baseURL + parma1
+        //let route = "http://next-page.co.kr/web/junam/look_surroundings_json.php"
+        print ("getArround>>\(route)")
+        
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as JSON)
         })
     }
     
     //주변문화재
-    public func getLookMonument(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/look_monument_json.php"
+    public func getLookMonument(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+        let route = baseURL + parma1
+        //let route = "http://next-page.co.kr/web/junam/look_monument_json.php"
+        
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as JSON)
         })
@@ -110,8 +121,10 @@ public class RestApiManager: NSObject {
 
     
     //스토리여행
-    public func getFunStory(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/fun_story_json.php"
+    public func getFunStory(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+        let route = baseURL + parma1
+
+        //let route = "http://next-page.co.kr/web/junam/fun_story_json.php"
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as JSON)
         })
@@ -119,82 +132,102 @@ public class RestApiManager: NSObject {
 
     
     //시간여행
-    public func getFunTime(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/fun_time_json.php"
+    public func getFunTime(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+        //let route = "http://next-page.co.kr/web/junam/fun_time_json.php"
+        let route = baseURL + parma1
+
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as JSON)
         })
     }
 
     //사계여행
-    public func getFunSeason(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/fun_season_json.php"
+    public func getFunSeason(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+        //let route = "http://next-page.co.kr/web/junam/fun_season_json.php"
+        let route = baseURL + parma1
+
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as JSON)
         })
     }
 
     //가이드등록
-    public func getGuideInfo(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/guide_info_json.php"
+    public func getGuideInfo(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+       // let route = "http://next-page.co.kr/web/junam/guide_info_json.php"
+        let route = baseURL + parma1
+
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as JSON)
         })
     }
 
-    public func getNotice(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/look_notice_json.php"
-        makeHTTPGetRequest(path: route, onCompletion: { json, err in
-            onCompletion(json as JSON)
-        })
-    }
+    public func getNotice(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+        //let route = "http://next-page.co.kr/web/junam/look_notice_json.php"
+        let route = baseURL + parma1
 
-    
-    
-    public func getLooKView(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/look_view_json.php"
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as JSON)
         })
     }
 
     
-    public func getLooKBeacon(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/look_beacon_json.php"
-        makeHTTPGetRequest(path: route, onCompletion: { json, err in
-            onCompletion(json as JSON)
-        })
-    }
     
-    
-    
-    
-    public func getRandomUser(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://www.a2big.com/test/json_test.php"
-        makeHTTPGetRequest(path: route, onCompletion: { json, err in
-            onCompletion(json as JSON)
-        })
-    }
-    
-    
-    public func getVisitCourse(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/look_view_json.php"
+    public func getLooKView(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+        //let route = "http://next-page.co.kr/web/junam/look_view_json.php"
+        let route = baseURL + parma1
+
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as JSON)
         })
     }
 
     
-    public func getMainMenu(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/junam_main_json.php"
+    public func getLooKBeacon(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+       // let route = "http://next-page.co.kr/web/junam/look_beacon_json.php"
+        let route = baseURL + parma1
+        
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as JSON)
         })
     }
     
     
-    public func getBeacons(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/look_beacon_json.php"
+    
+    
+    public func getRandomUser(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+       // let route = "http://www.a2big.com/test/json_test.php"
+        let route = baseURL + parma1
+
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as JSON)
+        })
+    }
+    
+    
+    public func getVisitCourse(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+       // let route = "http://next-page.co.kr/web/junam/look_view_json.php"
+        let route = baseURL + parma1
+
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as JSON)
+        })
+    }
+
+    
+    public func getMainMenu(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+       // let route = "http://next-page.co.kr/web/junam/junam_main_json.php"
+        let route = baseURL + parma1
+
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as JSON)
+        })
+    }
+    
+    
+    public func getBeacons(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+       // let route = "http://next-page.co.kr/web/junam/look_beacon_json.php"
+        let route = baseURL + parma1
+        
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as JSON)
         })
@@ -202,28 +235,33 @@ public class RestApiManager: NSObject {
 
 
     
-    public func getPopUp(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/look_view_popup_json.php"
+    public func getPopUp(baseURL: String, parma1:String,onCompletion: @escaping (JSON) -> Void) {
+      //  let route = "http://next-page.co.kr/web/junam/look_view_popup_json.php"
+        let route = baseURL + parma1
+
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as JSON)
         })
     }
 
     
-    public func getQuiz(onCompletion: @escaping (JSON) -> Void) {
-        let route = "http://next-page.co.kr/web/junam/quiz_json.php"
+    public func getQuiz(baseURL: String, parma1:String, onCompletion: @escaping (JSON) -> Void) {
+       // let route = "http://next-page.co.kr/web/junam/quiz_json.php"
+        let route = baseURL + parma1
+
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
             onCompletion(json as JSON)
         })
     }
 
     //가이드 호출
-    public func callGuide(major: String, minor:String,phone: String ,onCompletion: @escaping (JSON) -> Void) {
+    public func callGuide(baseURL: String, urlPparma:String, major: String, minor:String,phone: String ,onCompletion: @escaping (JSON) -> Void) {
         
         let parma1 = "&major=" + major
         let parma2 = "&minor=" + minor
         let parma3 = "&phone=" + phone
-        let route = baseURL + "call_guide.php?" + parma1 + parma2 + parma3
+      //  let route = baseURL + "call_guide.php?" + parma1 + parma2 + parma3
+        let route = baseURL + urlPparma + "?" + parma1 + parma2 + parma3
         print(route)
         
         makeHTTPGetRequest(path: route, onCompletion: { json, err in
@@ -231,6 +269,75 @@ public class RestApiManager: NSObject {
         })
     }
 
+    
+    //통계
+    public func insertStatsData(baseURL: String,
+                                urlPparma:String,
+                                type: String,
+                                sub_type:String,
+                                is_photo: String,
+                                is_stamp: String,
+                                title: String,
+                                onCompletion: @escaping (JSON) -> Void) {
+        
+        let parma1 = "type="     + type
+        let parma2 = "&sub_type=" + sub_type
+        let parma3 = "&is_photo=" + is_photo
+        let parma4 = "&is_stamp=" + is_stamp
+        let parma5 = "&title="    + title
+        
+        
+        //  let route = baseURL + "call_guide.php?" + parma1 + parma2 + parma3
+        let route = baseURL + urlPparma + "?" + parma1 + parma2 + parma3 + parma4 + parma5
+        print(route)
+        
+        
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as JSON)
+        })
+    }
+    
+    
+    //통계
+    public func insertPushData(baseURL: String,
+                                urlPparma:String,
+                                push_regid:String,
+                                onCompletion: @escaping (JSON) -> Void) {
+        
+        let parma1 = "phone_type=i"
+        let parma2 = "&push_regid=" + push_regid
+        
+        //  let route = baseURL + "call_guide.php?" + parma1 + parma2 + parma3
+        let route = baseURL + urlPparma + "?" + parma1 + parma2
+        print(route)
+        
+        
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as JSON)
+        })
+    }
+
+    
+    public func updatePushData(baseURL: String,
+                               urlPparma:String,
+                               push_no:String,
+                               flag:String,
+                               onCompletion: @escaping (JSON) -> Void) {
+        
+        let parma1 = "push_no="+push_no
+        let parma2 = "&flag=" + flag
+        
+        //  let route = baseURL + "call_guide.php?" + parma1 + parma2 + parma3
+        let route = baseURL + urlPparma + "?" + parma1 + parma2
+        print(route)
+        
+        
+        makeHTTPGetRequest(path: route, onCompletion: { json, err in
+            onCompletion(json as JSON)
+        })
+    }
+
+    
     
     // MARK: Perform a GET Request
     private func makeHTTPGetRequest(path: String, onCompletion: @escaping ServiceResponse) {
