@@ -17,8 +17,7 @@ public class FunTimeData {
    // public var is_ment:String!
     public var imageArr:[JSON]
 
-    let baseUrl = "http://next-page.co.kr/web/junam/"
-    required public init(json: JSON) {
+    required public init(json: JSON, baseUrl:String)  {
         time_no = json["time_no"].stringValue
         time_name = json["time_name"].stringValue
         media_no = baseUrl+json["media_no"].stringValue.replacingOccurrences(of: "./", with: "")

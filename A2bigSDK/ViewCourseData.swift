@@ -17,9 +17,8 @@ public  class ViewCourseData{
    public  var viewPhone:String!
    public  var flag:String!
 
-    public  let baseUrl = "http://next-page.co.kr/web/junam/"
 
-    required public init(json: JSON) {
+    required public init(json: JSON, baseUrl:String) {
        // let image = baseUrl+json["image_no"].stringValue.replacingOccurrences(of: "./", with: "")
         
 

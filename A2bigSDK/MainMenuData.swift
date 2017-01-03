@@ -13,8 +13,7 @@ public class MainMenuData {
     public var create_date: String!
     public var imageArr:[JSON]
     
-    let baseUrl = "http://next-page.co.kr/web/junam/"
-    required public init(json: JSON) {
+    required public init(json: JSON, baseUrl:String)  {
         main_no = json["main_no"].stringValue
         main_version = json["main_version"].stringValue
         imageArr = json["image_list"].arrayValue

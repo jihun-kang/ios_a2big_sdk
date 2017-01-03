@@ -15,8 +15,7 @@ public class LookMonumentData {
     public var monument_ment: String!
     public var imageArr:[JSON]
     
-    let baseUrl = "http://next-page.co.kr/web/junam/"
-    required public init(json: JSON) {
+    required public init(json: JSON, baseUrl:String) {
         monument_no = json["monument_no"].stringValue
         monument_name = json["monument_name"].stringValue
         media_no = baseUrl+json["media_no"].stringValue.replacingOccurrences(of: "./", with: "")

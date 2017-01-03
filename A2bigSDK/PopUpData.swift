@@ -20,8 +20,7 @@ public class PopUpData {
     
     
     
-    let baseUrl = "http://next-page.co.kr/web/junam/"
-    required public init(json: JSON) {
+    required public init(json: JSON, baseUrl:String)  {
         popup_no = json["popup_no"].stringValue
         top_name = json["top_name"].stringValue
         popup_name = json["popup_name"].stringValue

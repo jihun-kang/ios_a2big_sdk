@@ -17,8 +17,7 @@ public  class FunSeasonData {
    // public var is_ment:String!
     public var imageArr:[JSON]
 
-    let baseUrl = "http://next-page.co.kr/web/junam/"
-    required public init(json: JSON) {
+    required public init(json: JSON, baseUrl:String)  {
         
         
         season_no = json["season_no"].stringValue

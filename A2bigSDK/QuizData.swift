@@ -25,9 +25,7 @@ public class QuizData {
     public var quiz_select: String!
     public var quiz_flag: String!
     
-    
-    let baseUrl = "http://next-page.co.kr/web/junam/"
-    required public init(json: JSON) {
+    required public init(json: JSON, baseUrl:String)  {
         quiz_no = json["quiz_no"].stringValue
         quiz_name = json["quiz_name"].stringValue
         image_no = baseUrl+json["image_no"].stringValue.replacingOccurrences(of: "./", with: "")

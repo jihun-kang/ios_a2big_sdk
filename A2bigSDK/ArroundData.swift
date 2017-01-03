@@ -18,8 +18,7 @@ public class ArroundData {
     public var lon: String!
     public var address: String!
 
-    let baseUrl = "http://next-page.co.kr/web/junam/"
-    required public init(json: JSON) {
+    required public init(json: JSON, baseUrl:String)  {
         let image = baseUrl+json["image_no"].stringValue.replacingOccurrences(of: "./", with: "")
 
         

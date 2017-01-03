@@ -20,8 +20,7 @@ public class BeaconData {
 
     
     
-    let baseUrl = "http://next-page.co.kr/web/junam/"
-    required public init(json: JSON) {
+    required public init(json: JSON, baseUrl:String)  {
         uuid = json["uuid"].stringValue
         major = json["major"].stringValue
         minor = json["minor"].stringValue

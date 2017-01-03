@@ -21,8 +21,7 @@ public class GuideInfoData {
    // public var is_ment: String!
 
     
-    let baseUrl = "http://next-page.co.kr/web/junam/"
-    required public  init(json: JSON) {
+    required public  init(json: JSON, baseUrl:String)  {
         info_no = json["info_no"].stringValue
         info_name = json["info_name"].stringValue
         media_no = baseUrl+json["media_no"].stringValue.replacingOccurrences(of: "./", with: "")
