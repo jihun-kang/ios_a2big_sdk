@@ -264,10 +264,11 @@ public class RestApiManager: NSObject {
         let parma3 = "&is_photo=" + is_photo
         let parma4 = "&is_stamp=" + is_stamp
         let parma5 = "&title="    + title
-        
+        let parma6 = "&phone_type=i"
+
         
         //  let route = baseURL + "call_guide.php?" + parma1 + parma2 + parma3
-        let route = baseURL + urlPparma + "?" + parma1 + parma2 + parma3 + parma4 + parma5
+        let route = baseURL + urlPparma + "?" + parma1 + parma2 + parma3 + parma4 + parma5 + parma6
         print(route)
         
         
